@@ -1,0 +1,65 @@
+/*****
+
+SPACIAL SYSTEM SETTINGS VARIABLES
+
+*****/
+
+:root {
+	/** for reference - this follows an 8px linear system **/
+
+	/* setting spacial scale */
+	--base-spacer-size: 8px;
+
+	/* base spacial scale */
+	--spacer-micro: calc(var(--base-spacer-size) / 2);
+	--spacer-1: var(--base-spacer-size);
+	--spacer-2: calc(var(--base-spacer-size) * 2);
+	--spacer-3: calc(var(--base-spacer-size) * 3);
+	--spacer-4: calc(var(--base-spacer-size) * 4);
+	--spacer-5: calc(var(--base-spacer-size) * 5);
+	--spacer-6: calc(var(--base-spacer-size) * 6);
+	--spacer-7: calc(var(--base-spacer-size) * 7);
+	--spacer-8: calc(var(--base-spacer-size) * 8);
+	--spacer-9: calc(var(--base-spacer-size) * 9);
+	--spacer-10: calc(var(--base-spacer-size) * 10);
+	--spacer-11: calc(var(--base-spacer-size) * 11);
+	--spacer-12: calc(var(--base-spacer-size) * 12);
+	--spacer-13: calc(var(--base-spacer-size) * 13);
+	--spacer-14: calc(var(--base-spacer-size) * 14);
+	--spacer-15: calc(var(--base-spacer-size) * 15);
+	--spacer-16: calc(var(--base-spacer-size) * 16);
+	--spacer-17: calc(var(--base-spacer-size) * 17);
+	--spacer-18: calc(var(--base-spacer-size) * 18);
+	--spacer-19: calc(var(--base-spacer-size) * 19);
+	--spacer-20: calc(var(--base-spacer-size) * 20);
+	--spacer-21: calc(var(--base-spacer-size) * 21);
+	--spacer-22: calc(var(--base-spacer-size) * 22);
+	--spacer-23: calc(var(--base-spacer-size) * 23);
+	--spacer-24: calc(var(--base-spacer-size) * 24);
+	--spacer-25: calc(var(--base-spacer-size) * 25);
+	--spacer-26: calc(var(--base-spacer-size) * 26);
+	--spacer-27: calc(var(--base-spacer-size) * 27);
+	--spacer-28: calc(var(--base-spacer-size) * 28);
+	--spacer-29: calc(var(--base-spacer-size) * 29);
+	--spacer-30: calc(var(--base-spacer-size) * 30);
+	--spacer-31: calc(var(--base-spacer-size) * 31);
+	--spacer-32: calc(var(--base-spacer-size) * 32);
+	--spacer-33: calc(var(--base-spacer-size) * 33);
+	--spacer-34: calc(var(--base-spacer-size) * 34);
+	--spacer-35: calc(var(--base-spacer-size) * 35);
+	--spacer-36: calc(var(--base-spacer-size) * 36);
+	--spacer-37: calc(var(--base-spacer-size) * 37);
+	--spacer-38: calc(var(--base-spacer-size) * 38);
+	--spacer-39: calc(var(--base-spacer-size) * 39);
+	--spacer-40: calc(var(--base-spacer-size) * 40);
+	--spacer-41: calc(var(--base-spacer-size) * 41);
+	--spacer-42: calc(var(--base-spacer-size) * 42);
+	--spacer-43: calc(var(--base-spacer-size) * 43);
+	--spacer-44: calc(var(--base-spacer-size) * 44);
+	--spacer-45: calc(var(--base-spacer-size) * 45);
+	--spacer-46: calc(var(--base-spacer-size) * 46);
+	--spacer-47: calc(var(--base-spacer-size) * 47);
+	--spacer-48: calc(var(--base-spacer-size) * 48);
+	--spacer-49: calc(var(--base-spacer-size) * 49);
+	--spacer-50: calc(var(--base-spacer-size) * 50);
+}

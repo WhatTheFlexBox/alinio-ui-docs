@@ -1,0 +1,11 @@
+/*****
+
+GLOBAL FORMS VARIABLES
+
+*****/
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: var(--spacer-2);
+}

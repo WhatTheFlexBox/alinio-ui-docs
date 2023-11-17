@@ -1,0 +1,517 @@
+/*****
+
+ButtonComponent.module.css
+
+*****/
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	border-radius: var(--spacer-10);
+	font-family: var(--font-primary);
+	line-height: var(--body-line-height);
+	margin: var(--spacer-micro) 0;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+/* button background div */
+
+.background {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: 100%;
+	position: absolute;
+	will-change: transform;
+	z-index: -1;
+	transform: scale(0);
+	opacity: 0;
+	transform-origin: center;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.58, 1), opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* button hover */
+
+.button:hover .background {
+	transform: scale(1);
+	opacity: 1;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.58, 1), opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* button next sibling add spacing */
+
+.button + .button {
+	margin-left: var(--spacer-1);
+}
+
+.button:focus,
+.button:active:focus,
+.button:focus-within {
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+.button.disabled,
+.button:disabled,
+.button:disabled:hover {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+/* button colors */
+
+/* primary */
+
+.primary {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.primary svg path {
+	fill: var(--color-white);
+}
+
+.primary .filledIconWrapper {
+	background-color: var(--color-primary-hover);
+}
+
+.primary .background {
+	background-color: var(--color-primary-hover);
+}
+
+/* secondary */
+
+.secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-white);
+}
+
+.secondary svg path {
+	fill: var(--color-white);
+}
+
+.secondary .filledIconWrapper {
+	background-color: var(--color-secondary-hover);
+}
+
+.secondary .background {
+	background-color: var(--color-secondary-hover);
+}
+
+/* tertiary */
+
+.tertiary {
+	background-color: var(--color-tertiary);
+	color: var(--color-black);
+}
+
+.tertiary .filledIconWrapper {
+	background-color: var(--color-tertiary-hover);
+}
+
+.tertiary svg path {
+	fill: var(--color-black);
+}
+
+.tertiary .background {
+	background-color: var(--color-tertiary-hover);
+}
+
+/* quaternary */
+
+.quaternary {
+	background-color: var(--color-quaternary);
+	color: var(--color-black);
+}
+
+.quaternary .filledIconWrapper {
+	background-color: var(--color-quaternary-hover);
+}
+
+.secondary svg path {
+	fill: var(--color-black);
+}
+
+.quaternary .background {
+	background-color: var(--color-quaternary-hover);
+}
+
+/* dark */
+
+.dark {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+.dark .filledIconWrapper {
+	background-color: var(--color-black-hover);
+}
+
+.dark svg path {
+	fill: var(--color-white);
+}
+
+.dark .background {
+	background-color: var(--color-black-hover);
+}
+
+/* light */
+
+.light {
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+
+.light .filledIconWrapper {
+	background-color: var(--color-light-grey);
+}
+
+.light svg path {
+	fill: var(--color-black);
+}
+
+.light .background {
+	background-color: var(--color-light-grey);
+}
+
+/* button sizes */
+
+.sm {
+	padding: var(--spacer-micro) var(--spacer-1);
+}
+
+.md {
+	padding: var(--spacer-1) var(--spacer-2);
+}
+
+.lg {
+	padding: calc(var(--spacer-1) + var(--spacer-micro)) var(--spacer-3);
+}
+
+/* button content - the span that wraps the words */
+
+.content {
+	font-size: var(--fontsize-body);
+	min-height: var(--spacer-3);
+	display: inline-flex;
+	align-items: center;
+	font-weight: 500;
+	justify-content: center;
+	padding: 0 var(--spacer-micro);
+}
+
+/* button icon  - the custom svg that can live next to a button */
+
+.iconWrapper {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: calc(var(--spacer-1) / 4);
+	vertical-align: middle;
+	width: var(--spacer-2);
+	height: var(--spacer-2);
+	border-radius: 100%;
+	padding: var(--spacer-micro);
+}
+
+.filledIconWrapper {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: calc(var(--spacer-1) / 4);
+	vertical-align: middle;
+	width: var(--spacer-2);
+	height: var(--spacer-2);
+	border-radius: 100%;
+	padding: var(--spacer-micro);
+}
+
+.iconWrapper svg {
+	display: inline-flex;
+	align-self: center;
+	justify-self: center;
+}
+
+/*** 
+
+Button as an icon style
+
+***/
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	border-radius: var(--spacer-10);
+	font-family: var(--font-primary);
+	line-height: var(--body-line-height);
+	margin: var(--spacer-micro) 0;
+	padding: var(--spacer-micro);
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+.icon .background {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: 100%;
+	position: absolute;
+	will-change: transform;
+	z-index: -1;
+	transform: scale(0);
+	opacity: 0;
+	transform-origin: center;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.58, 1), opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* icon as button hover */
+
+.icon:hover .background {
+	transform: scale(1);
+	opacity: 1;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.58, 1), opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.icon:focus,
+.icon:active:focus,
+.icon:focus-within {
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+.icon.disabled,
+.icon:disabled,
+.icon:disabled:hover {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+/* button as icon colors */
+
+/* primary */
+
+.icon.primary {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.icon.primary .filledIconWrapper {
+	background-color: var(--color-primary-hover);
+}
+
+.icon.primary svg path {
+	fill: var(--color-white);
+}
+
+.icon.primary .background {
+	background-color: var(--color-primary-hover);
+}
+
+/* secondary */
+
+.icon.secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-white);
+}
+
+.icon.secondary .filledIconWrapper {
+	background-color: var(--color-secondary-hover);
+}
+
+.icon.secondary svg path {
+	fill: var(--color-white);
+}
+
+.icon.secondary .background {
+	background-color: var(--color-secondary-hover);
+}
+
+/* tertiary */
+
+.icon.tertiary {
+	background-color: var(--color-tertiary);
+	color: var(--color-black);
+}
+
+.icon.tertiary .filledIconWrapper {
+	background-color: var(--color-tertiary-hover);
+}
+
+.icon.tertiary svg path {
+	fill: var(--color-black);
+}
+
+.icon.tertiary .background {
+	background-color: var(--color-tertiary-hover);
+}
+
+/* quaternary */
+
+.icon.quaternary {
+	background-color: var(--color-quaternary);
+	color: var(--color-black);
+}
+
+.icon.quaternary .filledIconWrapper {
+	background-color: var(--color-quaternary-hover);
+}
+
+.icon.quaternary svg path {
+	fill: var(--color-black);
+}
+
+.icon.quaternary .background {
+	background-color: var(--color-quaternary-hover);
+}
+
+/* dark */
+
+.icon.dark {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+.icon.dark .filledIconWrapper {
+	background-color: var(--color-black-hover);
+}
+
+.icon.dark svg path {
+	fill: var(--color-white);
+}
+
+.icon.dark .background {
+	background-color: var(--color-black-hover);
+}
+
+/* light */
+
+.icon.light {
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+
+.icon.light .filledIconWrapper {
+	background-color: var(--color-light-hover);
+}
+
+.icon.light svg path {
+	fill: var(--color-black);
+}
+
+.icon.light .background {
+	background-color: var(--color-light-grey);
+}
+
+/* icon sizes */
+
+.icon.sm {
+	width: var(--spacer-4);
+	height: var(--spacer-4);
+	padding: var(--spacer-micro);
+}
+
+.icon.md {
+	width: var(--spacer-5);
+	height: var(--spacer-5);
+	padding: var(--spacer-1);
+}
+
+.icon.lg {
+	width: var(--spacer-6);
+	height: var(--spacer-6);
+	padding: var(--spacer-1);
+}
+
+/* icon content - hidden for this style */
+
+.icon .content {
+	display: none;
+}
+
+/* icon  - the custom svg that can live next to a button */
+
+.icon .iconWrapper {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	vertical-align: middle;
+	border-radius: 100%;
+	margin: 0;
+}
+
+.icon .iconWrapper svg {
+	display: inline-flex;
+	align-self: center;
+	justify-self: center;
+}
+
+/* button loading  */
+
+.spinner {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top: 2px solid var(--color-white);
+	border-radius: 50%;
+	width: var(--spacer-2);
+	height: var(--spacer-2);
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+	min-width: var(--spacer-2);
+	min-height: var(--spacer-2);
+	margin-left: var(--spacer-micro);
+}
+
+@-webkit-keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
