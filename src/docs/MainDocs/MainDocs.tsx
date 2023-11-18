@@ -42,7 +42,7 @@ function MainDocs() {
 				<div className='container'>
 					<div className='row'>
 						<div className='col-md-12 col-md-12 d-flex align-items-center justify-content-between'>
-							<h1 className='mb-0 flex'>
+							<h1 className='mb-0 flex mb-0 flex align-items-end'>
 								<AlinioLogo /> Alinio Docs
 							</h1>
 							<code className='dev-tag'>
