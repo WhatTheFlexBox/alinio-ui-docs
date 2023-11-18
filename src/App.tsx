@@ -20,7 +20,7 @@ function App() {
 						color='primary'
 						linkStyle='button'
 						icon={<IconArrow />}>
-						NPM
+						NPM Package
 					</Link>
 				</nav>
 				<Routes>
