@@ -28,7 +28,7 @@
 }
 @media (min-width: 1400px) {
 	.container {
-		max-width: clamp(1184px, 92vw, 1800px);
+		max-width: clamp(1184px, 92vw, 1600px);
 	}
 }
 
