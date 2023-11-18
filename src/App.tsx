@@ -14,8 +14,8 @@ function App() {
 					<Link href='https://github.com/WhatTheFlexBox/alinio-ui' color='light' target='_blank'>
 						Github
 					</Link>
-					<Link to='/docs' color='light' target='_blank'>
-						Github
+					<Link to='/docs' color='light'>
+						docs
 					</Link>
 					<Link
 						href='https://www.npmjs.com/package/alinio-ui'
