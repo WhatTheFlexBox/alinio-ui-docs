@@ -1,28 +1,27 @@
 import IconEmail from '../../ui_components/Forms/input/InputIcons/IconEmail';
-import InputField from '../../ui_components/Forms/input';
+import { Input } from 'alinio-ui';
 import IconArrow from '../../assets/media/custom-icons/IconArrow';
 
-const InputFieldDocs = () => {
+const InputDocs = () => {
 	return (
 		<>
 			<div className='row'>
 				<div className='col-md-12'>
 					<div className='panel-lg'>
-						<h2>InputField Component</h2>
+						<h2>Input Component</h2>
 						<hr></hr>
 						<p>
-							The <code>InputField</code> component is a customizable input field suitable for 'text-like'
-							inputs eg text, email, password, url, tel, search, number, date, time, month, week,
-							datetime-local.
+							The <code>Input</code> component is a customizable input field suitable for 'text-like' inputs
+							eg text, email, password, url, tel, search, number, date, time, month, week, datetime-local.
 						</p>
 						<p>Component import:</p>
 						<p>
-							<code>import InputField from 'PATH/ui_elements/InputField';</code>
+							<code>import Input from 'PATH/ui_elements/Input';</code>
 						</p>
 						<p>Example snippet with options:</p>
 						<pre>
 							<code>
-								{`<InputField 
+								{`<Input 
 	type="email"
 	label="Email Address"
 	placeholder="Enter your email"
@@ -45,26 +44,26 @@ const InputFieldDocs = () => {
 						<div className='divider'></div>
 						<h3>Form Validation and Agnostic Design</h3>
 						<p>
-							The <code>InputField</code> component is designed to be agnostic with respect to form validation
+							The <code>Input</code> component is designed to be agnostic with respect to form validation
 							libraries and methodologies. It does not include built-in validation logic, which provides
 							flexibility to use any form validation approach or library of your choice.
 						</p>
 						<p>
-							For instance, you can integrate <code>InputField</code> with popular form handling libraries
-							like <code>Formik</code> or <code>React Hook Form</code>, leveraging their validation
-							capabilities while using the custom UI and features of <code>InputField</code>.
+							For instance, you can integrate <code>Input</code> with popular form handling libraries like{' '}
+							<code>Formik</code> or <code>React Hook Form</code>, leveraging their validation capabilities
+							while using the custom UI and features of <code>Input</code>.
 						</p>
 						<p>
 							The component's <code>hasError</code> and <code>errorMessage</code> props allow you to display
 							validation feedback. These can be controlled externally based on your form's validation state,
-							making <code>InputField</code> adaptable to various validation patterns.
+							making <code>Input</code> adaptable to various validation patterns.
 						</p>
 						<p>Example with external validation:</p>
 						<pre>
 							<code>
 								{`// Example assuming useForm hook from React Hook Form
 import { useForm } from 'react-hook-form';
-import InputField from 'PATH/ui_elements/InputField';
+import Input from 'PATH/ui_elements/Input';
 
 const MyForm = () => {
     const { register, errors, handleSubmit } = useForm();
@@ -75,7 +74,7 @@ const MyForm = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <InputField
+            <Input
                 name="email"
                 label="Email Address"
                 ref={register({ required: 'Email is required' })}
@@ -89,7 +88,7 @@ const MyForm = () => {
 							</code>
 						</pre>
 						<p>
-							In this example, <code>InputField</code> is used with React Hook Form's <code>register</code>{' '}
+							In this example, <code>Input</code> is used with React Hook Form's <code>register</code>{' '}
 							function to connect the input to the form validation logic. The <code>hasError</code> and{' '}
 							<code>errorMessage</code> props are dynamically set based on the validation state managed by
 							React Hook Form.
@@ -98,19 +97,19 @@ const MyForm = () => {
 						<div className='divider'></div>
 						<h3>Ref Forwarding</h3>
 						<p>
-							The <code>InputField</code> component supports ref forwarding. This allows parent components to
+							The <code>Input</code> component supports ref forwarding. This allows parent components to
 							directly access the DOM node of the input element for tasks like setting focus, reading values,
 							etc.
 						</p>
 						<p>
 							To use ref forwarding, create a ref using <code>React.createRef</code> or the{' '}
-							<code>useRef</code> hook in your parent component and pass it to the <code>InputField</code>.
-							The component forwards this ref to the actual input element.
+							<code>useRef</code> hook in your parent component and pass it to the <code>Input</code>. The
+							component forwards this ref to the actual input element.
 						</p>
 						<pre>
 							<code>
 								{`import React, { useRef } from 'react';
-import InputField from 'PATH/ui_elements/InputField';
+import Input from 'PATH/ui_elements/Input';
 
 const ParentComponent = () => {
     const inputRef = useRef(null);
@@ -121,7 +120,7 @@ const ParentComponent = () => {
 
     return (
         <div>
-            <InputField ref={inputRef} type="text" label="Focusable Input" />
+            <Input ref={inputRef} type="text" label="Focusable Input" />
             <button onClick={focusInput}>Focus the Input</button>
         </div>
     );
@@ -129,15 +128,15 @@ const ParentComponent = () => {
 							</code>
 						</pre>
 						<p>
-							In this example, clicking the button will set focus to the <code>InputField</code> due to the
-							use of the forwarded ref.
+							In this example, clicking the button will set focus to the <code>Input</code> due to the use of
+							the forwarded ref.
 						</p>
 						<div className='divider'></div>
 
 						<h3>Clickable Icon Accessibility</h3>
 						<p>
-							When an icon within the <code>InputField</code> is interactive (such as a submit, search etc),
-							you can add an aria-label to the icon with the <code>iconAriaLabel=''</code> option. The
+							When an icon within the <code>Input</code> is interactive (such as a submit, search etc), you
+							can add an aria-label to the icon with the <code>iconAriaLabel=''</code> option. The
 							functionality for show/hide password automatically adds a show password / hide password
 							aria-label.
 						</p>
@@ -264,8 +263,8 @@ const ParentComponent = () => {
 						<div className='divider'></div>
 						<h3>Stylesheet</h3>
 						<p>
-							The InputField has locally scoped styles within its folder structure. You'll find the InputField
-							stylesheet by searching <code>InputField.Module.css</code>
+							The Input has locally scoped styles within its folder structure. You'll find the Input
+							stylesheet by searching <code>Input.Module.css</code>
 						</p>
 						<table>
 							<thead>
@@ -280,7 +279,7 @@ const ParentComponent = () => {
 									<td>Base class for the input field wrapper, handling the layout and sizing.</td>
 								</tr>
 								<tr>
-									<td>.inputField</td>
+									<td>.Input</td>
 									<td>Class for the input element itself, defining the core styling of the input field.</td>
 								</tr>
 								<tr>
@@ -319,7 +318,7 @@ const ParentComponent = () => {
 									<td>.error</td>
 									<td>Class for error messages.</td>
 								</tr>
-								{/* Add more rows for any other classes used in your InputField component */}
+								{/* Add more rows for any other classes used in your Input component */}
 							</tbody>
 						</table>
 						<div className='divider'></div>
@@ -343,13 +342,13 @@ const ParentComponent = () => {
 							</p>
 							<div className='panel-example'>
 								<form>
-									<InputField
+									<Input
 										type='password'
 										label='Password with clickable toggle icon'
 										showHidePassword={true}
 										id='field1'
 									/>
-									<InputField
+									<Input
 										type='email'
 										label='Email with icon left'
 										iconAriaLabel='Email Icon'
@@ -357,7 +356,7 @@ const ParentComponent = () => {
 										iconPosition='left'
 										id='field2'
 									/>
-									<InputField
+									<Input
 										type='search'
 										onIconClick={() => console.log('clicked')}
 										label='Search with clickable submit icon'
@@ -376,15 +375,15 @@ const ParentComponent = () => {
 							</p>
 							<div className='panel-example'>
 								<form>
-									<InputField type='text' label='Half width field' width='half' id='field4' />
-									<InputField type='text' label='Half width field' width='half' id='field5' />
-									<InputField type='text' label='Third width field' width='third' id='field6' />
-									<InputField type='text' label='Third width field' width='third' id='field7' />
-									<InputField type='text' label='Third width field' width='third' id='field8' />
-									<InputField type='text' label='Quarter width field' width='quarter' id='field9' />
-									<InputField type='text' label='Quarter width field' width='quarter' id='field10' />
-									<InputField type='text' label='Quarter width field' width='quarter' id='field11' />
-									<InputField type='text' label='Quarter width field' width='quarter' id='field12' />
+									<Input type='text' label='Half width field' width='half' id='field4' />
+									<Input type='text' label='Half width field' width='half' id='field5' />
+									<Input type='text' label='Third width field' width='third' id='field6' />
+									<Input type='text' label='Third width field' width='third' id='field7' />
+									<Input type='text' label='Third width field' width='third' id='field8' />
+									<Input type='text' label='Quarter width field' width='quarter' id='field9' />
+									<Input type='text' label='Quarter width field' width='quarter' id='field10' />
+									<Input type='text' label='Quarter width field' width='quarter' id='field11' />
+									<Input type='text' label='Quarter width field' width='quarter' id='field12' />
 								</form>
 							</div>
 						</div>
@@ -395,4 +394,4 @@ const ParentComponent = () => {
 	);
 };
 
-export default InputFieldDocs;
+export default InputDocs;

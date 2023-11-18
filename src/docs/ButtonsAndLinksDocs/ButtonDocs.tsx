@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from '../../ui_components/ButtonsAndLinks/Button';
+import { Button } from 'alinio-ui';
 import IconArrow from '../../assets/media/custom-icons/IconArrow';
 import LiveCodeExample from '../MainDocs/LiveCodeExample';
 
