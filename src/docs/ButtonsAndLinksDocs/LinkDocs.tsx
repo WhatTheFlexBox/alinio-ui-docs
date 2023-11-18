@@ -167,6 +167,15 @@ const LinkDocs = () => {
 								</tr>
 
 								<tr>
+									<td>iconPosition</td>
+									<td>
+										Position of the icon - left or right. Options: <code>'left' | 'right'</code>. Defaults to
+									</td>
+									<td>String</td>
+									<td>Right</td>
+								</tr>
+
+								<tr>
 									<td>iconAriaLabel</td>
 									<td>
 										If you've included an icon, add an aria-label for accessibility with this prop. It will

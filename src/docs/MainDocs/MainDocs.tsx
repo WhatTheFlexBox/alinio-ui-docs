@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import Link from '../../ui_components/ButtonsAndLinks/Link';
+import { Link } from 'alinio-ui';
 import ButtonDocs from '../ButtonsAndLinksDocs/ButtonDocs';
 import LinkDocs from '../ButtonsAndLinksDocs/LinkDocs';
 import InputFieldDocs from '../formDocs/InputFieldDocs';

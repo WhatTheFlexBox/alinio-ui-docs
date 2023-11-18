@@ -13,9 +13,11 @@ const ButtonDocs = () => {
 	const exampleCode1 = `<Button
 			// styling
 			color='primary'
-			icon={<IconArrow />}
-			fillIconWrapper={true}
 			size='md'
+			icon={<IconArrow />}
+			iconPosition='right'
+			fillIconWrapper={true}
+			
 			className='yourCustomClasses'
 
 			// accessibility
@@ -132,6 +134,14 @@ const ButtonDocs = () => {
 									</td>
 									<td>ReactNode</td>
 									<td>None</td>
+								</tr>
+								<tr>
+									<td>iconPosition</td>
+									<td>
+										Position of the icon - left or right. Options: <code>'left' | 'right'</code>. Defaults to
+									</td>
+									<td>String</td>
+									<td>Right</td>
 								</tr>
 								<tr>
 									<td>iconAriaLabel</td>

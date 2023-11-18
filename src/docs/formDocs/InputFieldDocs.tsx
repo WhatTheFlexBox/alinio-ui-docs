@@ -1,4 +1,3 @@
-import IconEmail from '../../ui_components/Forms/input/InputIcons/IconEmail';
 import { Input } from 'alinio-ui';
 import IconArrow from '../../assets/media/custom-icons/IconArrow';
 
@@ -26,7 +25,6 @@ const InputDocs = () => {
 	label="Email Address"
 	placeholder="Enter your email"
 	width="full"
-	icon={<IconEmail />}
 	iconPosition="left"
 	iconAriaLabel="Email Icon"
 	errorMessage="Invalid email address"
@@ -352,7 +350,6 @@ const ParentComponent = () => {
 										type='email'
 										label='Email with icon left'
 										iconAriaLabel='Email Icon'
-										icon={<IconEmail />}
 										iconPosition='left'
 										id='field2'
 									/>
