@@ -19,7 +19,7 @@ CONTENT PANELS
 .panel-lg h2:before {
 	content: '<';
 	display: inline-block;
-	color: var(--color-tertiary);
+	color: var(--color-primary);
 	position: absolute;
 	transform: translateX(-32px);
 }
@@ -27,7 +27,7 @@ CONTENT PANELS
 .panel-lg h2:after {
 	content: '/>';
 	display: inline-block;
-	color: var(--color-tertiary);
+	color: var(--color-quaternary);
 	transform: translateX(8px);
 }
 
