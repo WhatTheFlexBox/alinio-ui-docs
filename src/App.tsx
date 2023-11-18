@@ -27,7 +27,7 @@ function App() {
 					</Link>
 				</nav>
 				<Routes>
-					<Route path='/docs' element={<MainDocs />} index /> {/* Add the index property */}
+					<Route path='/' element={<MainDocs />} /> {/* Add the index property */}
 					{/* Define other Routes here if you have more pages */}
 				</Routes>
 			</div>
