@@ -12,15 +12,14 @@ CONTENT PANELS
 }
 
 .panel-lg {
-	padding: var(--spacer-1) var(--spacer-10) var(--spacer-6) var(--spacer-10);
+	padding: var(--spacer-1) 0 var(--spacer-6) var(--spacer-10);
 	margin-bottom: var(--spacer-3);
-	border-bottom: 2px solid var(--color-grey);
 }
 
 .panel-lg h2:before {
 	content: '<';
 	display: inline-block;
-	color: var(--color-secondary);
+	color: var(--color-tertiary);
 	position: absolute;
 	transform: translateX(-32px);
 }
@@ -111,13 +110,19 @@ HERO HEADER
 *****/
 
 header {
-	background-color: var(--color-primary);
-	padding-top: var(--spacer-18);
+	background-color: var(--color-white);
+	padding-top: var(--spacer-5);
 	padding-bottom: var(--spacer-5);
 }
 
 header h1 {
-	color: var(--color-white);
+	color: var(--color-black);
+}
+
+header .logo {
+	width: var(--spacer-7);
+	height: var(--spacer-7);
+	aspect-ratio: 1;
 }
 
 /*****

@@ -3,6 +3,7 @@ import { Link } from 'alinio-ui';
 import ButtonDocs from '../ButtonsAndLinksDocs/ButtonDocs';
 import LinkDocs from '../ButtonsAndLinksDocs/LinkDocs';
 import InputFieldDocs from '../formDocs/InputFieldDocs';
+import AlinioLogo from '../../assets/media/custom-icons/AlinioLogo';
 import './docs.css';
 
 function MainDocs() {
@@ -40,8 +41,11 @@ function MainDocs() {
 			<header>
 				<div className='container'>
 					<div className='row'>
-						<div className='col-md-12'>
-							<h1 className='mb-0'>UI Docs</h1>
+						<div className='col-md-12 col-md-12 d-flex align-items-center justify-content-between'>
+							<h1 className='mb-0'>
+								<AlinioLogo /> Alinio Docs
+							</h1>
+							<code>in development</code>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,9 @@
+nav.main-nav {
+	display: flex;
+	justify-content: flex-end;
+	gap: var(--spacer-1);
+	align-items: center;
+	padding: var(--spacer-1) var(--spacer-3);
+	background-color: var(--color-black);
+	z-index: 100;
+}
