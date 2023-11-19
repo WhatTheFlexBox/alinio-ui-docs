@@ -52,6 +52,8 @@ const ButtonDocs = () => {
 </>`;
 
 	const exampleCode4 = `<>
+	<Button size='xs'>Xs button</Button>
+	<Button size='xs' icon={<IconArrow />}></Button>
 	<Button size='sm'>Sm button</Button>
 	<Button size='sm' icon={<IconArrow />}></Button>
 	<Button size='md'>Md button</Button>
@@ -177,7 +179,7 @@ const ButtonDocs = () => {
 								<tr>
 									<td>size</td>
 									<td>
-										Size of the button. Options: <code>'sm', 'md', 'lg'</code>.
+										Size of the button. Options: <code>'xs' | 'sm' | 'md' | 'lg'</code>.
 									</td>
 									<td>string</td>
 									<td>'md'</td>
@@ -233,7 +235,7 @@ const ButtonDocs = () => {
 
 								<tr>
 									<td>.[size]</td>
-									<td>Class for styling the size of each button (e.g., .sm, .md, .lg).</td>
+									<td>Class for styling the size of each button (e.g., xs, .sm, .md, .lg).</td>
 								</tr>
 							</tbody>
 						</table>
@@ -246,7 +248,7 @@ const ButtonDocs = () => {
 								Set a color using <code>color=''</code>.
 							</p>
 							<p>
-								Available classes are{' '}
+								Options are{' '}
 								<code>'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'light' | 'dark'</code>
 							</p>
 
@@ -262,7 +264,7 @@ const ButtonDocs = () => {
 							<h4>Sizes</h4>
 							<p className=''>
 								Set a size using the <code>size=''</code> option. Available size selectors:{' '}
-								<code>'sm' | 'md' | 'lg'</code>. Fallback is 'md' if no option added.
+								<code>'xs' | 'sm' | 'md' | 'lg'</code>. Fallback is 'md' if no option added.
 							</p>
 							{/* Example 4 */}
 							<LiveCodeExample
