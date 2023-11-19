@@ -14,7 +14,7 @@ const LinkDocs = () => {
 	<Link 
 		// styling
 		linkStyle='link' 
-		color='primary'
+		color='dark'
 		icon=''
 		fillIconWrapper=''
 		size='md'
@@ -107,12 +107,14 @@ const LinkDocs = () => {
 			<div className='row'>
 				<div className='col-md-12'>
 					<div className='panel-lg'>
-						<h2>Link</h2>
+						{/* Doc title */}
+						<div className='row'>
+							<div className='col-md-12 d-flex align-items-center justify-content-between'>
+								<h2 className='mb-0'>Link</h2>
+								<code>import &#123; Link &#125; from 'alinio-ui';</code>
+							</div>
+						</div>
 						<hr></hr>
-						<p>Component import:</p>
-						<p>
-							<code>import Link from 'PATH/ui_elements/Link';</code>
-						</p>
 						{/* Example 1 */}
 						<LiveCodeExample
 							code={exampleCode1}
@@ -140,7 +142,10 @@ const LinkDocs = () => {
 								</tr>
 								<tr>
 									<td>color</td>
-									<td>Sets the color theme of the link. Options include 'primary', 'secondary', etc.</td>
+									<td>
+										Sets the color theme of the link. Options{' '}
+										<code>'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'light' | 'dark'</code>
+									</td>
 									<td>string</td>
 									<td>'primary'</td>
 								</tr>
@@ -149,8 +154,8 @@ const LinkDocs = () => {
 									<td>
 										Add a custom class name for the link. This renders last in the selector. It auto adds a
 										class for global style overrides if you don't want to manage the styles in the locally
-										scoped file. These are '.buttonLink' for a button style link, '.iconLink' for an icon
-										style link, and '.link' for a standard link.
+										scoped css. These are '.buttonLink' for a button style link, '.iconLink' for an icon style
+										link, and '.link' for a standard link.
 									</td>
 									<td>string</td>
 									<td>None</td>
@@ -194,17 +199,11 @@ const LinkDocs = () => {
 								<tr>
 									<td>size</td>
 									<td>
-										Size of the 'button' styled link. Options: 'sm', 'md', 'lg'. Defaults to medium if no
-										option selected.
+										Size of the 'button' styled link. Options: <code>'sm' | 'md' | 'lg'</code>. Defaults to
+										medium if no option selected.
 									</td>
 									<td>string</td>
 									<td>'md'</td>
-								</tr>
-								<tr>
-									<td>to</td>
-									<td>For internal navigation using React Router's Link. Specifies the path to link to.</td>
-									<td>string</td>
-									<td>None</td>
 								</tr>
 								<tr>
 									<td>...rest</td>

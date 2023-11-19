@@ -19,7 +19,7 @@ CONTENT PANELS
 .panel-lg h2:before {
 	content: '<';
 	display: inline-block;
-	color: var(--color-primary);
+	color: var(--color-quaternary);
 	position: relative;
 	margin-right: var(--spacer-1);
 }
