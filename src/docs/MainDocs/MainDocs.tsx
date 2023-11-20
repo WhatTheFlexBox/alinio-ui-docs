@@ -4,10 +4,11 @@ import ButtonDocs from '../ButtonsAndLinksDocs/ButtonDocs';
 import LinkDocs from '../ButtonsAndLinksDocs/LinkDocs';
 import InputFieldDocs from '../formDocs/InputFieldDocs';
 import AlinioLogo from '../../assets/media/custom-icons/AlinioLogo';
+import Intro from './Intro';
 import './docs.css';
 
 function MainDocs() {
-	const [activeSection, setActiveSection] = useState('inputFieldsComponent');
+	const [activeSection, setActiveSection] = useState('intro');
 	const [fade, setFade] = useState(true);
 	const contentRef = useRef<HTMLDivElement>(null);
 
@@ -31,6 +32,8 @@ function MainDocs() {
 				return <LinkDocs />;
 			case 'buttonComponent':
 				return <ButtonDocs />;
+			case 'intro':
+				return <Intro />;
 			default:
 				return null;
 		}
@@ -63,10 +66,10 @@ function MainDocs() {
 								<p className='h6'>Buttons & Links</p>
 								<ul className='aside-links'>
 									<li>
-										<Link onClick={() => handleSectionChange('Link')}>Link Component</Link>
+										<Link onClick={() => handleSectionChange('Link')}>Link</Link>
 									</li>
 									<li>
-										<Link onClick={() => handleSectionChange('buttonComponent')}>Button Component</Link>
+										<Link onClick={() => handleSectionChange('buttonComponent')}>Button</Link>
 									</li>
 								</ul>
 								<p className='h6'>Forms</p>
